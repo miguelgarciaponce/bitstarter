@@ -1,137 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
-    <link rel="stylesheet" href="flexslider.css" type="text/css">
-    <script src="jquery.flexslider.js"></script>
-
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>CyberJobs</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+      <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+      <link rel="stylesheet" href="flexslider.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="jquery.flexslider.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
- 
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
-          rel="stylesheet" type="text/css">
-    <style type="text/css">
+   
+      <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+            rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Hanalei+Fill' rel='stylesheet' type='text/css'>
 
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
+
+      <style type="text/css">
+
+        /* Large desktop */
+        @media (min-width: 980px) { 
+          body {
+           padding-top: 60px;
+          }
+         .linediv-l {
+           border-right: 1px white solid;
+          }
+         .linediv-r {
+           border-left: 1px white solid;
+         }
         }
-       .linediv-l {
-         border-right: 1px white solid;
+
+        /* Landscape phones and down */
+        @media (max-width: 480px) { 
+         .copy {
+           padding: 2.5% 10%;
+         }
+         .linediv-l {
+           border-bottom: 1px white solid;
+         }
+         .linediv-r {
+           border-top: 1px white solid;
+         }
         }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
 
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
+        /* All form factors */
 
-      /* All form factors */
+        /* Main body and headings */
+        body{
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        .heading, .subheading {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+          text-align: center;
+        }
+        p.lead {
+          padding-top: 1.5%;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+        }
 
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
+        /* Video pitch and Action */
+        .pitch {
+          padding: 2.5% 0%;
+        }
+        .order {
+          padding: 2% 0%;
+        }
+        .actions {
+          padding: 3% 0%;
+        }
+        .video, .thermometer, .order, .social, .statistics {
+          text-align: center;
+        }
+        .statistics h3, .statistics p {
+          color: white;
+        }
 
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
+        /* Marketing Copy and Footer */
+        .copy {
+          padding-top: 2.5%;
+          padding-bottom: 2.5%;
+          text-align: justify;
+        }
+        .asset {
+          padding: 2.5% 0%;
+        }
+        .footer {
+          color: #cccccc;
+          text-align: center;
+        }
+        .footer p {
+          font-size: 11px;
+        }
+        .footer a {
+          color: #ccccff;
+        }
 
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
+        div.addthis_toolbox {
+        width:180px;
+        margin: 0 auto;
+        }
+      </style>
+  <script type="text/javascript">
 
-      div.addthis_toolbox {
-      width:180px;
-      margin: 0 auto;
-      }
-    </style>
-<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42959561-1']);
+    _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-42959561-1']);
-  _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  </script>
 
-</script>
+  <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-    $('.flexslider').flexslider();
- });
+    $('.flexslider').flexslider({
+      animation: "slide",
+      controlsContainer: ".flex-container",
+      slideshowSpeed: 3000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+      animationSpeed: 600     
+    });
+
+
+          
+  });
+
+  $(document).ready(function(){
+ 
+        $(".row-fluid").hide();
+        setTimeout(function() { $(".row-fluid").show(1500); }, 3000);
+
+        $('.actions').mouseenter(function() {
+
+                  $(".actions").css({'backgroundColor': '#343434'});
+                  $(".actions").css('cursor', 'pointer');
+
+        }); 
+ 
+        $('.actions').mouseleave(function() {
+                            
+            $(".actions").css({'backgroundColor': '#9E9E9E'});
+
+        });
+
+});
+
 </script>
 
-  </head>
-  <body>
+    </head>
+    <body>
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
+      <!-- Mobile-friendly navbar adapted from example. -->
+      <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar"
                   data-toggle="collapse" data-target=".nav-collapse">
@@ -139,7 +174,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <div id="titulo" ><a class="brand" href="#">Cyberjobs</a></div>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -160,7 +195,7 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product: House Automation System</h1>
+          <h1>House Automation System</h1>
        </div>
       </div> 
       <div class="row-fluid subheading">
@@ -170,10 +205,26 @@
           <p class="lead">Don't worry, lives better</p>
         </div>
       </div>
+      <div id="Presentation_Slider">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="http://benchmarkreviews.com/wp-content/uploads/2013/08/Apple-iPhone-5-SmartPhone.jpg" />
+          </li>
+          <li>
+            <img src="http://cdn5.andro4all.com/wp-content/blogs.dir/28/files/2012/04/white_galaxy_nexus_official_0.jpg" />
+          </li>
+          <li>
+            <img src="http://www.inteldig.com/wp-content/uploads/2012/06/windows-phone-7.jpg" />
+          </li>
+        </ul>
+      </div>
+      </div>
+
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
 
-
+      <!-- Place somewhere in the <body> of your page -->
 
 	  <img class="img-polaroid" src="http://i.imgur.com/slnt47F.jpg" alt="imag_pol">
        </div>
@@ -220,14 +271,14 @@
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
 	    <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_compact"></a>
-<a class="addthis_counter addthis_bubble_style"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ff8b1d2b442e04"></script>
+    <div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ff8b1d2b442e04"></script>
 <!-- AddThis Button END -->
 	  </div>
         </div>
@@ -241,17 +292,17 @@
         <div class="span5 offset1 asset">
           <img class="img-polaroid" src="http://i.imgur.com/Q2jfCQV.jpg">
         </div>
-        <div class="span5 copy">
+        <div class="span5 copy contenido">
           <p>
-           Control your house in a simple way with out newest app for android or ios. Turn on the lights of the rooms wherever you are. 	  </p>
+          Our job is to do your live better. We are developing control system in order to take the control of your house. You can know what is happenning at the moment inside your house. Control your house in a simple way with out newest app for android , ios or Windows Phone. Turn on the lights of the rooms wherever you are.  </p>
 
         </div>
       </div>
 
       <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
+        <div class="span5 offset1 copy copy-right contenido">
           <p>
-	    You would change the security settings or adapt the comfort level in the room. All you were thinking is possible now.     </p>
+	         You would change the security settings or adapt the comfort level in the room. All you were thinking is possible now.     </p>
         </div>
         <div class="span5 asset">
           <img class="img-polaroid" src="http://i.imgur.com/b5yXqjd.jpg">
@@ -274,8 +325,8 @@
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                     <p>Can I watch some examples? Yes, sure. In our youtube channel there are a lot of videos which you can watch.</p>
-		     <p>Do I need have a smartphone? In case you don't, we can offer one for an inexpensive price.</p>
+                     Can I watch some examples? Yes, sure. In our youtube channel there are a lot of videos which you can watch. <br/>
+                      Do I need have a smartphone? In case you don't, we can offer one for an inexpensive price.
 </div>
                 </div>
               </div>
